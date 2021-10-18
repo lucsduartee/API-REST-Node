@@ -22,15 +22,13 @@ class Tabelas {
   }
 
   criarPets() {
-    const query = 'CREATE TABLE IF NOT EXISTS PETS' +
-      '(id int NOT NULL AUTO_INCREMENT, nome varchar(50),' +
-      'imagem varchar(200), PRIMARY KEY (id))';
+    const query = 'CREATE TABLE IF NOT EXISTS Pets (id int NOT NULL AUTO_INCREMENT, nome varchar(50), imagem varchar(200), PRIMARY KEY (id))';
 
     this.conexao.query(query, (err) => {
       if (err) {
         console.log(err);
       } else {
-        console.log('Table Pet criada com sucesso');
+        console.log('Table Pets criada com sucesso');
       }
     })
   }
